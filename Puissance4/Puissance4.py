@@ -1,4 +1,6 @@
+import sys
 import pygame
+import random
 from pygame.locals import *
 from joueur import Joueur
 
@@ -9,6 +11,13 @@ def Create_Platform():
     for x in range(0,700,100):
         for y in range(100,700,100):
             surface.blit(square, (x,y))
+
+def platform_is_full():
+    for i in range(len(Grille[0])):
+        if Grille[0][i] == 0: return False
+    font=pygame.font.Font(pygame.font.match_font('arialblack'), 50, bold=True)
+    text = font.render("Fin de Partie",True,(230,170, 230))
+    return True
 
 def direction(g,case, direction):
     l,c = case
@@ -60,6 +69,10 @@ def place_coin(j):
             Grille[l][c] = j.value
             break
 
+def random_place():
+    i = random.randint(0, len(Grille))
+    return 9 + (i*100)
+
 # const initialization
 LONGUEUR = 700
 LARGEUR = 700
@@ -85,6 +98,7 @@ jaune = pygame.image.load('jaune.png').convert_alpha()
 rouge = pygame.image.load('rouge.png').convert_alpha()
 
 j1 = True
+isDown = False
 win = False
 game_running = True
 clock = pygame.time.Clock()
@@ -107,33 +121,62 @@ while game_running:
             Touches.append(event.key)
         elif event.type == KEYUP and event.key in Touches:
             Touches.remove(event.key)
+            isDown = False
 
-    if j1 == True and win == False:
-        if K_RIGHT in Touches and 609 > joueur1.x >= 9:
-            joueur1.move_coin(100, surface)
-            print_game(joueur1)
-        elif K_LEFT in Touches and 609 >= joueur1.x > 9:
-            joueur1.move_coin(-100, surface)
-            print_game(joueur1)
-        elif K_SPACE in Touches:
-            place_coin(joueur1)
-            print_game(joueur2)
-            win = gagne_direction(Grille)
-            j1 = False
-
-    elif j1 == False and win == False:
-        if K_RIGHT in Touches and 609 > joueur2.x >= 9:
-            joueur2.move_coin(100, surface)
-            print_game(joueur2)
-        elif K_LEFT in Touches and 609 >= joueur2.x > 9:
-            joueur2.move_coin(-100, surface)
-            print_game(joueur2)
-        elif K_SPACE in Touches:
-            place_coin(joueur2)
-            print_game(joueur1)
-            win = gagne_direction(Grille)
-            j1 = True
+    # player's input
+    if not win:
+        if j1:
+            if K_RIGHT in Touches and 609 > joueur1.x >= 9:
+                if not isDown:
+                    isDown = True
+                    joueur1.move_coin(100, surface)
+                    print_game(joueur1)
+                    joueur1.i = int((joueur1.x - 9) / 100)
+            elif K_LEFT in Touches and 609 >= joueur1.x > 9:
+                if not isDown:
+                    isDown = True
+                    joueur1.move_coin(-100, surface)
+                    print_game(joueur1)
+                    joueur1.i = int((joueur1.x - 9) / 100)
+            elif K_SPACE in Touches and Grille[0][joueur1.i] == 0:
+                if not isDown:
+                    isDown = True
+                    place_coin(joueur1)
+                    print_game(joueur2)
+                    win = platform_is_full()
+                    if not win:
+                        win = gagne_direction(Grille)
+                        j1 = False
+            elif K_ESCAPE in Touches:
+                game_running = False
+        #"AI"
+        elif not j1:
+            pygame.time.wait(1000)
+            joueur2.x = random_place() 
+            joueur2.i = int((joueur2.x - 9) / 100)
+            if Grille[0][joueur2.i] == 0:
+                place_coin(joueur2)
+                print_game(joueur1)
+                win = platform_is_full()
+                if not win:
+                    win = gagne_direction(Grille)
+                    j1 = True
+    else:
+        if K_SPACE in Touches:
+            if not isDown:
+                isDown = True
+                win = False
+                j1 = True
+                joueur1.x = joueur2.x = 9
+                Grille = [[0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0],
+                          [0,0,0,0,0,0,0]]
+                print_game(joueur1)
+            
     # display's update 
-    clock.tick(7)
+    clock.tick(60)
     pygame.display.flip()
 pygame.quit()
