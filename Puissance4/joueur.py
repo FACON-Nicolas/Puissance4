@@ -4,13 +4,8 @@ class Joueur:
     def __init__(self, image, value):
         self.image = image
         self.value = value
+        
     # methods
-    def get_pseudo(self):
-        return self.pseudo 
-
-    def get_image(self):
-        return self.image
-
     def move_coin(self, addMove, surface):
         self.x += addMove
         self.i += (addMove/100)
