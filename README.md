@@ -2,6 +2,6 @@
 jeu de puissance 4 en python
 
 # pré-requis
-python 3.7
+python 3.7 \n
 pygame
 
