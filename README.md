@@ -2,7 +2,7 @@
 -jeu de puissance 4 en python
 
 # pré-requis
-1. python 3.7 
+1. python
 2. pygame
 
 # installation
