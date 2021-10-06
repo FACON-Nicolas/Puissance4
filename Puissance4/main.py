@@ -1,5 +1,5 @@
 """
-Code wrote by Nicolas FACON, Student in University Institute 
+Code wrote by Nicolas FACON, Student in Universitary Institute 
 of Technology in Lens, France, I'm a beginner in Python and 
 algorithmics and I hope you'll like my game and its development.
 """
