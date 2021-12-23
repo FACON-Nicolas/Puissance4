@@ -183,13 +183,22 @@ class AI(player):
 
         >>> get_max_coin([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,1,0,2,0,0,0],[0,0,0,2,0,0,0]], 3)
         0
-        
+
         """
         coin, dir = self.count_coin(platform, col)
         return dir
 
     def get_best_sequence(self, platform: List[List[int]]):
-        """"""
+        """ get the best sequence and its size 
+        :param platform : game's platform
+        :type platform : List[List[int]]
+        :return :List of sequences and its size
+        :rtype : tuple
+        :examples:
+        
+        >>> get_best_sequence([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,1,0,2,0,0,0],[0,0,0,2,0,0,0]])
+        ([3], 3)
+        """
         places, max = [], 0
         for col in range(7):
             copy = self.copy_game(platform)
@@ -203,23 +212,48 @@ class AI(player):
         return places, max
 
     def get_best_sequence_index(self, platform: List[List[int]]):
-        """"""
+        """ get the best sequence 
+        :param platform : game's platform
+        :type platform : List[List[int]]
+        :return :List of sequences
+        :rtype : List[int]
+        :examples:
+        
+        >>> get_best_sequence_index([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,1,0,2,0,0,0],[0,0,0,2,0,0,0]])
+        [3]
+        """
         places, max = self.get_best_sequence(platform)
         return self.remove_columns(platform, places) if self.remove_columns(platform, places) != [] else self.get_all_columns(platform)
 
     def get_best_sequence_max(self, platform: List[List[int]]):
-        """"""
+        """ get the best sequences' size
+        :param platform : game's platform
+        :type platform : List[List[int]]
+        :return :List of the best sequences' size
+        :rtype : int
+        :examples:
+        
+        >>> get_best_sequence_max([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,1,0,2,0,0,0],[0,0,0,2,0,0,0]])
+        3
+        """
         places, max = self.get_best_sequence(platform)
         return max
 
     def intersection(self, L1: List[int], L2: List[int]):
-        """
+        """ get intersection between 2 lists
+        :param L1 : first list
+        :param L2 : second list
+        :type L1 : List[List[int]]
+        :type L2 : List[List[int]]
+        :return : intersection of the 2 lists
+        :rtype : list[int]
+        :example :
 
         >>> intersection([2,3,4,6],[0,3])
         [3]
 
         >>> intersection([2,3,4,6],[1,2,4])
-        [2,4]
+        [2, 4]
 
         >>> intersection([1,2,4,6],[3,5])
         []
@@ -228,7 +262,13 @@ class AI(player):
         return [i for i in L2 if i in L1]
 
     def warning_contender_sequence(self, platform: List[List[int]]):
-        """ 
+        """ prevents AI when the human player has a long sequence of coins
+        :param platform : game's platform
+        :type platform : List[List[int]]
+        :return : list with the index to use to block the human player
+        :rtype : List[int]
+        :examples: 
+
         >>> get_best_sequence_contender([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[2,1,1,2,1,2,1],[2,1,2,2,1,2,1],[1,2,2,1,2,1,1]])
         [3, 6]
         >>> get_best_sequence_contender([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[2,1,1,2,1,2,1],[2,1,2,2,1,2,1],[2,2,2,1,2,1,2]])
@@ -245,7 +285,17 @@ class AI(player):
         return places 
 
     def set_places(self, platform: List[List[int]]):
-        """"""
+        """ set places in terms of the game
+        :param plaform : game's platform
+        :type platform : List[List[int]] 
+        :return : List with the best index to choice
+        :rtype : List[int]
+        :examples:
+
+        >>> set_places([[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[1,2,2,2,0,1,1],[1,2,2,1,2,1,1],[1,1,2,1,2,1,1]])
+        [3]
+
+        """
         places = self.get_best_sequence_index(platform)  
         if self.get_best_sequence_max(platform) < 4:
             if self.warning_contender_sequence(platform) != []:
@@ -255,7 +305,12 @@ class AI(player):
         return places
 
     def AI_gameplay(self, game, platform: List[List[int]]):
-        """"""
+        """ instructions executed by AI
+        :param game : game's data
+        :param platform : game's platform
+        :type game: game 
+        :type platform : List[List[int]] """
+
         if not game.canPlay and not game.win() and not game.platform_is_full():
             pygame.time.wait(1000)
             places = self.set_places(platform)
