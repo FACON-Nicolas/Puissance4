@@ -69,8 +69,7 @@ class game:
     def platform_is_full(self):
         """ the platform is full 
         :return : if the platform is full
-        :rtype : bool 
-        TODO : add unit test """
+        :rtype : bool """
         return 0 not in self.grille[0]
 
     def get_player(self):
