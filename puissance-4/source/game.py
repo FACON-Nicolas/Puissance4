@@ -57,7 +57,7 @@ class game:
             elif self.Touches == [K_SPACE]:
                 row, column = 0, self.player.x // 100
                 if self.grille[row][column] == 0:
-                    self.player.place_coin(self.grille)
+                    self.player.place_coin(self.grille, self.player.x // 100)
                     self.canPlay = False
 
     def controls_game_over(self):
@@ -76,19 +76,17 @@ class game:
     def get_player(self):
         """ get actual player 
         :return : actual player
-        :rtype : player | AI (player)
-        TODO : add unit test """
+        :rtype : player | AI (player) """
         return self.player if self.canPlay else self.AI
 
-    def win_dir(self, direction, case):
+    def win_dir(self, direction: tuple, case: tuple):
         """ cans know if a player win with certain direction
         :param direction : direction of the 'victory'
         :param case : start position
         :type direction : tuple(int)
         :type case : tuple(int)
         :return : if a player wins
-        :rtype : bool
-        TODO : add unit test """
+        :rtype : bool """
         row, column = case
         value = self.grille [row][column]
         direction_row, direction_column = direction
@@ -101,8 +99,7 @@ class game:
     def win(self):
         """ cans know if a player win 
         :return : if a player win
-        :rtype : bool 
-        TODO : add unit test """
+        :rtype : bool """
         for row in range(self.HEIGHT):
             for column in range(self.WIDTH):
                 for col_dir in range(-1,2):
