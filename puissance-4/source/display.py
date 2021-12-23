@@ -1,5 +1,8 @@
+from typing import List
 import pygame
 from pygame.constants import SHOWN
+
+from player import player
 
 class display:
     """ creation of the display classe"""
@@ -15,7 +18,7 @@ class display:
         self.yellow = pygame.image.load('../images/jaune.png').convert_alpha()
         self.red = pygame.image.load('../images/rouge.png').convert_alpha()
 
-    def show_game(self, platform):
+    def show_game(self, platform: List[List[int]]):
         """ show the game 
         :param platform : connect 4's board
         :type platform : List[List[int]] """
@@ -27,20 +30,19 @@ class display:
                 self.surface.blit(self.carre, (columns*100, (rows*100)+100))
                 if coin is not None : self.surface.blit(coin, ((columns*100), 100 + rows*100))
 
-    def show_coin(self, platform, case):
+    def show_coin(self, platform: List[List[int]], case: tuple):
         """ show all coins on the screen
         :param platform : connect 4's board 
         :param case : coin's position 
         :type platform : List[List[int]]
         :type case : tuple(int) 
         :return : player's coin 
-        :rtype : pygame.image 
-        TODO : add unit test """
+        :rtype : pygame.image """
         row, column = case
         if platform[row][column] == 1: return self.yellow.copy()
         elif platform[row][column] == 2: return self.red.copy()
 
-    def show_player_coin(self, canPlay, player):
+    def show_player_coin(self, canPlay: bool, player: player):
         """ show the player's coin 
         :param canPlay : if the human player cans play
         :param player : actual player
