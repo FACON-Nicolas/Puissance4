@@ -1,11 +1,15 @@
-# Puissance4
--jeu de puissance 4 en python
+# Puissance 4 (Connect 4)
+- Connect 4 developped in python with the pygame framework
 
-# pré-requis
-1. python
-2. pygame
+## Prerequisites : 
+ - Install python 3.7
+ - Install the lastest version of Pygame (``py -3.7 -m pip install pygame``)
+ - Install the connect 4's zip file
 
-# installation
-1. installer python
-2. installer pygame
+## Keys : 
+| actions | keys |
+|---------|------|
+| move right | RIGHT |
+| move left  | LEFT |
+| place coin / Restart Game | SPACE |
 
