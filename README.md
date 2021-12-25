@@ -1,5 +1,5 @@
 # Puissance 4 (Connect 4)
-- Connect 4 developped in python with the pygame framework
+- Connect 4 developped in python with the pygame framework (ht e project is not over, many bugs are presents and the UI doesn't exist.
 
 ## Prerequisites : 
  - Install python 3.7
