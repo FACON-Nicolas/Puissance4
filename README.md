@@ -9,7 +9,7 @@
 </p>
 
 <p align="center"><b>!! THIS GAME IS NOT FINISHED AND CONTAINS MANY BUGS !!</b></p>
-<p align="center">This repository contains the source code of a connect4's (puissance 4) copy, you can play to connect4 like 
+<p align="justify">This repository contains the source code of a connect4's (puissance 4) copy, you can play to connect4 like 
 in your childhood. In this game, your computer cans also play against you like a human player, good luck ! </p>
 <h1 align="center" id="summary">Summary</h1>
 
@@ -25,17 +25,23 @@ in your childhood. In this game, your computer cans also play against you like a
 
 * **[Facon Nicolas](https://www.github.com/FACON-Nicolas/)** : Creator of the project 
 
+<h1 align="center" id="features">Features</h1>
+
 <h1 align="center" id="prerequisites">Prerequisites</h1>
+
+<h1 align="center" id="install">Install</h1>
 
  - Possess Windows
  - Install python 3.7
  - Install the lastest version of Pygame (``py -3.7 -m pip install pygame``)
  - Install the connect4's zip file
 
-## Keys : 
+<h1 align="center" id="releases">Releases</h1>
+
+<h1 align="center" id="keys">Keys</h1>
+
 | actions | keys |
 |---------|------|
 | move right | RIGHT |
 | move left  | LEFT |
 | place coin / Restart Game | SPACE |
-
