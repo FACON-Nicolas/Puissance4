@@ -11,6 +11,9 @@
 <p align="center"><b>!! THIS GAME IS NOT FINISHED AND CONTAINS MANY BUGS !!</b></p>
 <p align="justify">This repository contains the source code of a connect4's (puissance 4) copy, you can play to connect4 like 
 in your childhood. In this game, your computer cans also play against you like a human player, good luck ! </p>
+
+<p align="center"><a href="https://ibb.co/4t1tTdT"><img style="border-radius: 10px;" src="https://i.ibb.co/7CkCW4W/Capture-d-cran-2022-02-19-105805.png" alt="Capture-d-cran-2022-02-19-105805" border="0"></a><br /><a target='_blank' href='https://fr.imgbb.com/'></a><br /></p>
+
 <h1 align="center" id="summary">Summary</h1>
 
 * **[Summary](#summary)**
@@ -28,12 +31,17 @@ in your childhood. In this game, your computer cans also play against you like a
 <h1 align="center" id="features">Features</h1>
 
 <p align="center">controls with keyboard</p>
+<p align="center"><a href="https://ibb.co/C038sNS"><img style="border-radius: 10px;" src="https://i.ibb.co/q13jFX2/Capture-d-cran-2022-02-19-110318.png" alt="Capture-d-cran-2022-02-19-110318" border="0"></a><br /><a target='_blank' href='https://fr.imgbb.com/'></a><br /></p>
 <p align="center">AI that plays against player</p>
+<p align="center"><a href="https://ibb.co/4t1tTdT"><img style="border-radius: 10px;" src="https://i.ibb.co/7CkCW4W/Capture-d-cran-2022-02-19-105805.png" alt="Capture-d-cran-2022-02-19-105805" border="0"></a><br /><a target='_blank' href='https://fr.imgbb.com/'></a><br /></p>
 <p align="center">AI cans take decisions</p>
+<p align="center"><a href="https://ibb.co/7KkLMVN"><img style="border-radius: 10px;" src="https://i.ibb.co/RcjdrP4/Capture-d-cran-2022-02-19-105806.png" alt="Capture-d-cran-2022-02-19-105806" border="0"></a></p>
 
 <h1 align="center" id="install">Install</h1>
 
 <h1 align="center" id="prerequisites">Prerequisites</h1>
+
+<p align="center">the launch files nammed Puissance4.bat called a python and pygame download for you if it's not installed</p>
 
  - Possess Windows
  - Install python 3.7
