@@ -1,10 +1,17 @@
-# Puissance 4 (Connect 4)
-- Connect 4 developped in python with the pygame framework (the project is not over, many bugs are presents and the UI doesn't exist.)
+<h1 align="center">Puissance 4 Alpha</h1>
 
-## Prerequisites : 
+<p align="center"><b>!! THIS GAME IS NOT FINISHED AND CONTAINS MANY BUGS !!</b></p>
+
+<h1 align="center" id="summary">Summary</h1>
+
+* **[Summary](#summary)**
+
+<h1 align="center" id="prerequisites">Prerequisites</h1>
+
+ - Possess Windows
  - Install python 3.7
  - Install the lastest version of Pygame (``py -3.7 -m pip install pygame``)
- - Install the connect 4's zip file
+ - Install the connect4's zip file
 
 ## Keys : 
 | actions | keys |

@@ -13,10 +13,10 @@ class display:
         self.WIDTH = 700
         self.HEIGHT = 700
         self.surface = pygame.display.set_mode((self.WIDTH, self.HEIGHT))
-        self.surface_name = pygame.display.set_caption('Puissance4')
-        self.carre = pygame.image.load('../images/carre.png').convert_alpha()
-        self.yellow = pygame.image.load('../images/jaune.png').convert_alpha()
-        self.red = pygame.image.load('../images/rouge.png').convert_alpha()
+        pygame.display.set_caption('Puissance4')
+        self.carre = pygame.image.load('puissance-4/images/carre.png').convert_alpha()
+        self.yellow = pygame.image.load('puissance-4/images/jaune.png').convert_alpha()
+        self.red = pygame.image.load('puissance-4/images/rouge.png').convert_alpha()
 
     def show_game(self, platform: List[List[int]]):
         """ show the game 
@@ -37,7 +37,7 @@ class display:
         :type platform : List[List[int]]
         :type case : tuple(int) 
         :return : player's coin 
-        :rtype : pygame.image """
+        :rtype : pygame.Image """
         row, column = case
         if platform[row][column] == 1: return self.yellow.copy()
         elif platform[row][column] == 2: return self.red.copy()
