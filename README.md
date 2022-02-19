@@ -27,9 +27,13 @@ in your childhood. In this game, your computer cans also play against you like a
 
 <h1 align="center" id="features">Features</h1>
 
-<h1 align="center" id="prerequisites">Prerequisites</h1>
+<p align="center">controls with keyboard</p>
+<p align="center">AI that plays against player</p>
+<p align="center">AI cans take decisions</p>
 
 <h1 align="center" id="install">Install</h1>
+
+<h1 align="center" id="prerequisites">Prerequisites</h1>
 
  - Possess Windows
  - Install python 3.7
