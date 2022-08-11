@@ -51,7 +51,7 @@
 
 <h1 align="center" id="install">Install</h1>
 
-Once the prerequisites installed, go your terminal (or git bash terminal) and write this:
+<p align="center">Once the prerequisites installed, go your terminal (or git bash terminal) and write this: </p>
 
 ```sh
 git clone https://github.com/FACON-Nicolas/Puissance4
