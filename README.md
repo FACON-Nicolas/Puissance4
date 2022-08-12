@@ -1,4 +1,4 @@
-# <p align="center">Connect 4 Alpha</p>
+# Connect 4 Alpha
 
 <p align="center">
     <img src="https://img.shields.io/badge/Release-v3.0-blueviolet" alt="">
@@ -15,7 +15,7 @@
 
 #
 
-# <p align="center">Summary</p>
+# Summary
 
 * **[Summary](#summary)**
 * **[Credits](#credits)**
@@ -25,13 +25,13 @@
 * **[Releases](#releases)**
 #
 
-# <p align="center">Credits</p>
+# Credits
 
 * **[Facon Nicolas](https://www.github.com/FACON-Nicolas/)** : Creator of the project 
 
 #
 
-# <p align="center">Features</p>
+# Features
 
 <p align="center">AI plays against player</p>
 
@@ -43,7 +43,7 @@
 
 #
 
-# <p align="center" id="prerequisites">Prerequisites</p>
+# Prerequisites
 
 + Windows:  
     - **[Python](https://www.python.org/downloads/)**
@@ -61,7 +61,7 @@
 
 #
 
-# <p align="center">Install</p>
+# Install
 
 <p align="center">Once the prerequisites installed, go on your terminal (or git bash terminal) and write this: </p>
 
@@ -74,7 +74,7 @@ python3 puissance-4/source/game.py
 ```
 #
 
-# <p align="center">Keys</p>
+# Keys
 
 | actions | keys |
 |---------|------|
