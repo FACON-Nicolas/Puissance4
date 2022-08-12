@@ -189,3 +189,9 @@ else if (sequences human size >= 3)
 
 else place AI coin normally
 ```
+
+# Releases
+
+* **1.0** : 2021-08-10
+* **2.0** : 2021-10-13
+* **3.0** : 2022-12-22
