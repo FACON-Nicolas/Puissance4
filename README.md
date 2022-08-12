@@ -173,6 +173,16 @@ def intersection(self, L1: List[int], L2: List[int]) -> List[int]:
     return [i for i in L2 if i in L1]
 ```
 
+## Final Functionning
 
+the final functionning is:
 
+```
+if (sequence ai size = 4): place AI coin normally
 
+else if (sequences human size >= 3)
+
+.... if (intersection is not empty) place AI coin in intersection
+
+.... else place AI coin in best human sequences
+```
