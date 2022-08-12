@@ -23,6 +23,10 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
 * **[AI Functionning](#ai-functionning)**
     * **[Beginning](#beginnning)**
     * **[AI Update](#ai-update)**
+    * **[Set Theory](#set-theory)**
+        * **[Intersection](#intersection)**
+        * **[Union](#union)**
+        * **[Intersection implementation](#intersection-implementation)**
 
 # Credits
 
@@ -127,7 +131,7 @@ to improve my AI algorithm, I decided to check the best next human player sequen
 | 4 | O | X | X | O | O | O | X |
 | 5 | X | O | O | X | X | O | X |
 
-In this situation, the human coin is **X**, and the best positions to place a human coin are **{2,}** and the best sequences will be equal to 4, the value chosen will be **2**.
+In this situation, the human coin is **X**, and the best positions to place a human coin are **{2}** and the best sequences will be equal to 4, the value chosen will be **2**.
 
 **Example 2:**
 
@@ -141,3 +145,34 @@ In this situation, the human coin is **X**, and the best positions to place a hu
 | 5 | X | O | O | X | X | O | X |
 
 In this situation, the human coin is **X**, and the best positions to place a human coin are **{2, 5}** and the best sequences will be equal to 4, the value will be chosen **randomly**
+
+## Set Theory
+
+In this AI functionning, the power of this AI is the [set theory](https://en.wikipedia.org/wiki/Set_theory), and particularly the intersection
+
+### Intersection
+
+The intersection's symbol is ``∩``.
+
+**Example**:
+
+**{1, 3, 7, 9, 13} ∩ {1, 2, 6, 8, 9} = {1, 9}**
+
+### Union
+
+The intersection's symbol is ``∪``.
+
+**{1, 3, 7, 9, 13} ∪ {1, 2, 6, 8, 9} = {1, 2, 3, 6, 7, 8, 9, 13}**
+
+### Intersection implementation
+
+To implement an intersection, I wrote this method 
+
+```py
+def intersection(self, L1: List[int], L2: List[int]) -> List[int]:
+    return [i for i in L2 if i in L1]
+```
+
+
+
+
