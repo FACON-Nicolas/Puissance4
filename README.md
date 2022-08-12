@@ -19,6 +19,8 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
 * **[Prerequisites](#prerequisites)**
 * **[Install](#install)**
 * **[Releases](#releases)**
+* **[AI Functionning](#ai-functionning)**
+    * **[Beginning](#beginnning)**
 
 # Credits
 
@@ -69,3 +71,37 @@ python3 puissance-4/source/game.py
 | move right | RIGHT |
 | move left  | LEFT |
 | place coin / Restart Game | SPACE |
+
+# AI Functionning
+
+An AI system is included in the connect 4.
+
+But, ***how does this AI work ?***. 
+
+## beginnning
+
+At the beginning, I wanted an AI that places its coin at the best sequences' position only. If many position are possible, then a random position is choosen.
+
+example : 
+
+|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | - | - | - | - | - | - | - |
+| 1 | - | - | - | - | - | - | - |
+| 2 | - | O | X | O | X | - | - |
+| 3 | O | O | X | X | O | O | - |
+| 4 | O | X | X | O | O | O | X |
+| 5 | X | O | O | X | X | O | X |
+
+In this situation, the AI coin is **O**, and the best positions to place a coin are **{2, 5}**, a value will be choosen **randomly**.
+
+|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | - | - | - | - | - | - | - |
+| 1 | - | - | - | - | - | - | - |
+| 2 | - | O | X | O | X | - | - |
+| 3 | O | O | X | X | X | O | - |
+| 4 | O | X | X | O | O | O | X |
+| 5 | X | O | O | X | X | O | X |
+
+In this situation, the AI coin is **O**, and the best positions to place a coin are **{5}**, the value choosen will be **5**
