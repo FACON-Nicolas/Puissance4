@@ -201,15 +201,15 @@ else place AI coin normally
 
 **1.0**:
 
-    Create this game was my first personal challenge in development, I made it with no OOP and bad scripting.
+Create this game was my first personal challenge in development, I made it with no OOP and bad scripting.
 
 **2.0**:
 
-    - OOP Development
-    - Linux adaptation
+- OOP Development
+- Linux adaptation
 
 **3.0**:
 
-    - OOP Upgrade (big upgrade)
-    - AI upgrade (big upgrade)
-    - fix bugs.
+- OOP Upgrade (big upgrade)
+- AI upgrade (big upgrade)
+- fix bugs.
