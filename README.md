@@ -83,7 +83,7 @@ But, ***how does this AI work ?***.
 
 At the beginning, I wanted an AI that places its coin at the best sequences' position only. If many position are possible, then a random position is choosen.
 
-example : 
+**example 1:**
 
 |   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -96,6 +96,8 @@ example :
 
 In this situation, the AI coin is **O**, and the best positions to place a coin are **{2, 5}**, a value will be choosen **randomly**.
 
+**example 2:**
+
 |   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | 0 | - | - | - | - | - | - | - |
@@ -106,3 +108,5 @@ In this situation, the AI coin is **O**, and the best positions to place a coin 
 | 5 | X | O | O | X | X | O | X |
 
 In this situation, the AI coin is **O**, and the best positions to place a coin are **{5}**, the value choosen will be **5**
+
+This algorithm gives the best positions to place an AI Coin, but there's a problem, if the human player doesn't care about the AI game, then this is almost useless, then I had to check the best next human player sequences.
