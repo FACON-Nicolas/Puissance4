@@ -28,6 +28,7 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
         * **[Intersection implementation](#intersection-implementation)**
     * **[Final AI Functionning](#final-functionning)**
 * **[Releases](#releases)**
+* **[Updates](#updates)**
 
 # Credits
 
@@ -195,3 +196,20 @@ else place AI coin normally
 * **1.0** : 2021-08-10
 * **2.0** : 2021-10-13
 * **3.0** : 2022-12-22
+
+# Updates
+
+**1.0**:
+
+    Create this game was my first personal challenge in development, I made it with no OOP and bad scripting.
+
+**2.0**:
+
+    - OOP Development
+    - Linux adaptation
+
+**3.0**:
+
+    - OOP Upgrade (big upgrade)
+    - AI upgrade (big upgrade)
+    - fix bugs.
