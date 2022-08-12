@@ -22,6 +22,7 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
 * **[Keys](#keys)**
 * **[AI Functionning](#ai-functionning)**
     * **[Beginning](#beginnning)**
+    * **[AI Update](#ai-update)**
 
 # Credits
 
@@ -67,10 +68,10 @@ python3 puissance-4/source/game.py
 
 # Keys
 
-| actions | keys |
-|---------|------|
-| move right | RIGHT |
-| move left  | LEFT |
+|          actions          | keys  |
+|:-------------------------:|:-----:|
+|         move right        | RIGHT |
+|          move left        | LEFT  |
 | place coin / Restart Game | SPACE |
 
 # AI Functionning
@@ -81,7 +82,7 @@ But, ***how does this AI work ?***.
 
 ## beginnning
 
-At the beginning, I wanted an AI that places its coin at the best sequences' position only. If many position are possible, then a random position is choosen.
+At the beginning, I wanted an AI that places its coin at the best sequences' position only. If many position are possible, then a random position is chosen.
 
 **example 1:**
 
@@ -94,7 +95,7 @@ At the beginning, I wanted an AI that places its coin at the best sequences' pos
 | 4 | O | X | X | O | O | O | X |
 | 5 | X | O | O | X | X | O | X |
 
-In this situation, the AI coin is **O**, and the best positions to place a coin are **{2, 5}**, a value will be choosen **randomly**.
+In this situation, the AI coin is **O**, and the best positions to place a coin are **{2, 5}**, a value will be chosen **randomly**.
 
 **example 2:**
 
@@ -107,6 +108,36 @@ In this situation, the AI coin is **O**, and the best positions to place a coin 
 | 4 | O | X | X | O | O | O | X |
 | 5 | X | O | O | X | X | O | X |
 
-In this situation, the AI coin is **O**, and the best positions to place a coin are **{5}**, the value choosen will be **5**
+In this situation, the AI coin is **O**, and the best positions to place a coin are **{5}**, the value chosen will be **5**
 
 This algorithm gives the best positions to place an AI Coin, but there's a problem, if the human player doesn't care about the AI game, then this is almost useless, then I had to check the best next human player sequences.
+
+## AI Update
+
+to improve my AI algorithm, I decided to check the best next human player sequences. Column by column, the human sequences will be checked and only the best position will be kept.
+
+**Example 1**:
+
+|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | - | - | - | - | - | - | - |
+| 1 | - | - | - | - | - | - | - |
+| 2 | - | O | X | O | X | - | - |
+| 3 | O | O | X | X | O | O | - |
+| 4 | O | X | X | O | O | O | X |
+| 5 | X | O | O | X | X | O | X |
+
+In this situation, the human coin is **X**, and the best positions to place a human coin are **{2,}** and the best sequences will be equal to 4, the value chosen will be **2**.
+
+**Example 2:**
+
+|   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| 0 | - | - | - | - | - | - | - |
+| 1 | - | - | - | - | - | - | - |
+| 2 | - | O | X | O | X | X | - |
+| 3 | O | O | X | X | X | O | - |
+| 4 | O | X | X | O | O | O | X |
+| 5 | X | O | O | X | X | O | X |
+
+In this situation, the human coin is **X**, and the best positions to place a human coin are **{2, 5}** and the best sequences will be equal to 4, the value will be chosen **randomly**
