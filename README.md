@@ -18,7 +18,6 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
 * **[Features](#features)**
 * **[Prerequisites](#prerequisites)**
 * **[Install](#install)**
-* **[Releases](#releases)**
 * **[Keys](#keys)**
 * **[AI Functionning](#ai-functionning)**
     * **[Beginning](#beginnning)**
@@ -27,6 +26,8 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
         * **[Intersection](#intersection)**
         * **[Union](#union)**
         * **[Intersection implementation](#intersection-implementation)**
+    * **[Final AI Functionning](#final-functionning)**
+* **[Releases](#releases)**
 
 # Credits
 
@@ -185,4 +186,6 @@ else if (sequences human size >= 3)
 .... if (intersection is not empty) place AI coin in intersection
 
 .... else place AI coin in best human sequences
+
+else place AI coin normally
 ```
