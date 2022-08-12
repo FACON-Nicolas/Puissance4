@@ -19,6 +19,7 @@ This repository contains the source code of a connect4's (puissance 4) copy. In 
 * **[Prerequisites](#prerequisites)**
 * **[Install](#install)**
 * **[Releases](#releases)**
+* **[Keys](#keys)**
 * **[AI Functionning](#ai-functionning)**
     * **[Beginning](#beginnning)**
 
