@@ -1,4 +1,5 @@
 from typing import List
+import os
 
 class player:
     """ creation of the player classe """
@@ -20,8 +21,9 @@ class player:
         """ place coin in the game's platform 
         :param platform : connect 4's platform
         :type platform : List[List[int]] """
-        for i in range(len(platform)):
-            row = (len(platform) - (1+i))
-            if platform[row][col] == 0: 
-                platform[row][col] = value
-                break
+        row = 0
+        while (row < len(platform) and platform[row][col] == 0):
+            row += 1
+        if (row == -1): return
+        row -= 1
+        platform[row][col] = value
