@@ -1,4 +1,4 @@
-# Connect 4 Alpha
+# Connect 4
 
 ![](https://img.shields.io/badge/Release-v3.0-blueviolet)
 ![](https://img.shields.io/badge/Language-python-005255)
@@ -6,7 +6,6 @@
 ![](https://img.shields.io/badge/Size-57Ko-f12222)
 ![](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
-**!! THIS GAME IS NOT FINISHED AND CONTAINS MANY BUGS !!**
 This repository contains the source code of a connect4's (puissance 4) copy. In this game, your computer cans also play against you like a human player, good luck ! </p>
 
 ![](https://github.com/FACON-Nicolas/FACON-Nicolas/blob/main/resources/connect4.gif?raw=true)
@@ -196,6 +195,7 @@ else place AI coin normally
 * **1.0** : 2021-08-10
 * **2.0** : 2021-10-13
 * **3.0** : 2021-12-22
+* **4.0** : 2022-11-10
 
 # Updates
 
@@ -213,3 +213,12 @@ Create this game was my first personal challenge in development, I made it with 
 - OOP Upgrade (big upgrade)
 - AI upgrade (big upgrade)
 - fix bugs.
+
+**4.0**:
+
+- Fix bugs
+
+# Idea of upgrades
+
+ - upgrade OOP
+ - add Min Max algorithm to improve the AI functionning
