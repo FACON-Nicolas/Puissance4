@@ -1,6 +1,6 @@
 # Connect 4
 
-![](https://img.shields.io/badge/Release-v3.0-blueviolet)
+![](https://img.shields.io/badge/Release-v4.0-blueviolet)
 ![](https://img.shields.io/badge/Language-python-005255)
 ![](https://img.shields.io/badge/Libraries-pygame-00cfff)
 ![](https://img.shields.io/badge/Size-57Ko-f12222)
